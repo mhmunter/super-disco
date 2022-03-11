@@ -1,6 +1,6 @@
 var now = moment();
+var button = document.getElementById("saveBtn")
 
-// document.querySelector("#currentDay").innerText = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
 
 $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 
@@ -29,8 +29,32 @@ $(value).children("textarea ").addClass("present")
         $(value).children("textarea").addClass("future")
     }
 })
-console.log("hello")
+let textSv = $("textarea").val();
 
-//  $('div').each(function(index, value) {
-//   console.log(`div${index}: ${this.id}`);
-// });
+
+// var textSavstoreText = function(){
+// var time = document.getElementById("time").value
+
+// var textarea = document.getElementsByTagName("textarea".value)
+
+
+// const time = {
+// time = time,
+// textarea = textarea,
+
+// }
+
+
+
+    window.localStorage.setItem("time", JSON.stringify(textSv));
+
+function getRecords(){
+    var records = window.localStorage.getItem(textSv); 
+    var text = document.getElementById("type")
+    var paragraph = text.append("textSv");
+}
+
+
+
+
+
