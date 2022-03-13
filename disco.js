@@ -1,5 +1,7 @@
 var now = moment();
-var button = document.getElementById("saveBtn")
+var buttonT = document.getElementById("saveBtn");
+var time = document.getElementById("time");
+let text = $("textarea").val();
 
 
 $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
@@ -29,7 +31,59 @@ $(value).children("textarea ").addClass("present")
         $(value).children("textarea").addClass("future")
     }
 })
-let textSv = $("textarea").val();
+
+// var nineAmText = document.querySelector("#toDo");
+
+// $(".9B").click(function () {
+//     var taskText = $.trim($("#task-text-9").val());
+//     localStorage.setItem("tasks.nineAm", JSON.stringify(taskText));
+// });
+
+ 
+
+
+$(".saveBtn").on("click", function(){
+    localStorage.setItem($(this).parent().attr("id"), $(this).siblings(".toDo").val())
+    // $(this)siblings(".toDo").val()); 
+    // //    text = $((text).val()) 
+    //    $(localStorage.setItem("text", JSON.stringify(text))
+});
+
+
+
+
+
+
+function load(){
+    localStorage.getItem($(".toDo").val());
+    $("#9 .toDo").val(localStorage.getItem("9"));
+
+    for  (var i = 0; i< 9; i++){
+        $("#" + [i] + " .toDo").val(localStorage.getItem([i]));
+    }
+};
+
+load()
+
+// 5
+
+    
+
+
+// var loadTasks = function(){
+//     time = JSON.parse(localStorage.getItem("#time"));
+
+//     if(!tasks){
+//         tasks = {
+//             time:[],
+//             buttonT: [],
+//         }
+//     }
+// }
+
+
+
+
 
 
 // var textSavstoreText = function(){
@@ -39,20 +93,20 @@ let textSv = $("textarea").val();
 
 
 // const time = {
-// time = time,
-// textarea = textarea,
+// time : rowHour,
+// textarea : textSv,
 
 // }
 
 
 
-    window.localStorage.setItem("time", JSON.stringify(textSv));
+    
 
-function getRecords(){
-    var records = window.localStorage.getItem(textSv); 
-    var text = document.getElementById("type")
-    var paragraph = text.append("textSv");
-}
+// function getRecords(){
+//     var records = window.localStorage.getItem(textSv); 
+//     var text = document.getElementById("type")
+//     var paragraph = text.append("textSv");
+// }
 
 
 
