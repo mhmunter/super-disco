@@ -18,6 +18,9 @@ $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 //javascript querry slector all("class") loop through
 //jquery how to loop?
 //keybinding pdf
+
+
+//changes color----------------------------
 $(".row").each(function(index, value){
     console.log(index, value)
     var currentHour = moment().hours();
@@ -32,31 +35,48 @@ $(value).children("textarea ").addClass("present")
     }
 })
 
-// var nineAmText = document.querySelector("#toDo");
 
-// $(".9B").click(function () {
-//     var taskText = $.trim($("#task-text-9").val());
-//     localStorage.setItem("tasks.nineAm", JSON.stringify(taskText));
-// });
 
  
 
-
+//save button-----------------------------------------------
 $(".saveBtn").on("click", function(){
     localStorage.setItem($(this).parent().attr("id"), $(this).siblings(".toDo").val())
-    // $(this)siblings(".toDo").val()); 
-    // //    text = $((text).val()) 
-    //    $(localStorage.setItem("text", JSON.stringify(text))
+    
 });
 
 
 
 
 
-
+//loads JSON--------------------------------------------------
 function load(){
     localStorage.getItem($(".toDo").val());
     $("#9 .toDo").val(localStorage.getItem("9"));
+
+    localStorage.getItem($(".toDo").val());
+    $("#10 .toDo").val(localStorage.getItem("10"));
+
+    localStorage.getItem($(".toDo").val());
+    $("#11 .toDo").val(localStorage.getItem("11"));
+
+    localStorage.getItem($(".toDo").val());
+    $("#12 .toDo").val(localStorage.getItem("12"));
+
+    localStorage.getItem($(".toDo").val());
+    $("#13 .toDo").val(localStorage.getItem("13"));
+
+    localStorage.getItem($(".toDo").val());
+    $("#14 .toDo").val(localStorage.getItem("14"));
+
+    localStorage.getItem($(".toDo").val());
+    $("#15 .toDo").val(localStorage.getItem("15"));
+
+    localStorage.getItem($(".toDo").val());
+    $("#16 .toDo").val(localStorage.getItem("16"));
+
+    localStorage.getItem($(".toDo").val());
+    $("#17 .toDo").val(localStorage.getItem("17"));
 
     for  (var i = 0; i< 9; i++){
         $("#" + [i] + " .toDo").val(localStorage.getItem([i]));
@@ -65,48 +85,12 @@ function load(){
 
 load()
 
-// 5
-
-    
-
-
-// var loadTasks = function(){
-//     time = JSON.parse(localStorage.getItem("#time"));
-
-//     if(!tasks){
-//         tasks = {
-//             time:[],
-//             buttonT: [],
-//         }
-//     }
-// }
 
 
 
 
 
 
-// var textSavstoreText = function(){
-// var time = document.getElementById("time").value
-
-// var textarea = document.getElementsByTagName("textarea".value)
-
-
-// const time = {
-// time : rowHour,
-// textarea : textSv,
-
-// }
-
-
-
-    
-
-// function getRecords(){
-//     var records = window.localStorage.getItem(textSv); 
-//     var text = document.getElementById("type")
-//     var paragraph = text.append("textSv");
-// }
 
 
 
